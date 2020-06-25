@@ -24,6 +24,6 @@
 
 .hotel-view{
   background-color: #fff;
-  // element should grow as much as it can
+  // element should grow as much as it can, and use default 1 shrink - that we allow to shrink
   flex: 1;
 }
