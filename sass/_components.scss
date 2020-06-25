@@ -2,21 +2,64 @@
 // LOGO
 .logo {
   height: 3.25rem;
+  margin-left: 3rem;
 }
 
 /////////////////
 // SEARCH
 .search {
-  &__input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 40%;
+  &__input {
+    // default fonts at input fields does not inherit from the global setups therefore inherit
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: .7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    // so we can include the button(icon)
+    margin-right: -3.25rem;
+    transition: all .3s;
+    // when input element get focus/active
+    &:focus {
+      // get rid of the outline which is drawn around elements
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3);
+    }
 
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
+    }
+  }
+
+  &__input:focus + &__button {
+    background-color: var(--color-grey-light-3);
   }
 
   &__button {
-
+    border: none;
+    background-color: var(--color-grey-light-2);
+    &:focus {
+      // get rid of the outline which is drawn around elements
+      outline: none;
+    }
+    &:active {
+      transform: translateY(2px);
+    }
   }
   &__icon {
     height: 2rem;
     width: 2rem;
+    fill: var(--color-grey-dark-3);
+    // same as font
+    display: inherit;
   }
 }
 
