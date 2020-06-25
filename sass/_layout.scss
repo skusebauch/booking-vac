@@ -7,9 +7,13 @@
 }
 
 .header {
+  font-size: 1.4rem;
   height: 7rem;
   background-color: #fff;
   border-bottom: var(--color-grey-light-2);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .content {
@@ -24,6 +28,6 @@
 
 .hotel-view{
   background-color: #fff;
-  // element should grow as much as it can
+  // element should grow as much as it can, and use default 1 shrink - that we allow to shrink
   flex: 1;
 }
