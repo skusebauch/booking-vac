@@ -24,10 +24,16 @@
   background-color: var(--color-grey-dark-1);
   // no grow no shrink always 18% width
   flex: 0 0 18%;
+  display: flex;
+  // change default direction of flex
+  flex-direction: column;
+  justify-content: space-between;
 }
+
 
 .hotel-view{
   background-color: #fff;
+  height: 80rem;
   // element should grow as much as it can, and use default 1 shrink - that we allow to shrink
   flex: 1;
 }
