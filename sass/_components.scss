@@ -12,6 +12,11 @@
   align-items: center;
   justify-content: center;
   flex: 0 0 40%;
+  @media only screen and (max-width: $bp-smallest) {
+    order: 1;
+    flex: 0 0 100%;
+    background-color: var(--color-grey-light-2);
+  }
   &__input {
     // default fonts at input fields does not inherit from the global setups therefore inherit
     font-family: inherit;
@@ -117,6 +122,12 @@
     border-radius: 50%;
     margin-right: 1rem;
   }
+
+  //&__user-name {
+  //  @media only screen and (max-width: $bp-small) {
+  //    display: none;
+  //  }
+  //}
 }
 
 /////////////////
@@ -195,6 +206,11 @@
       justify-content: center;
       padding: 2rem;
     }
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+      padding: 1.5rem .5rem;
+    }
+
   }
 
   &__icon {
@@ -202,6 +218,12 @@
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor;
+    @media only screen and (max-width: $bp-small) {
+      margin-right: 0;
+      margin-bottom: .7rem;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
   }
 }
 
@@ -244,6 +266,10 @@
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+      padding: 1.25rem 2rem;
+    }
   }
 
   &__stars {
@@ -267,6 +293,9 @@
   }
   &__icon-location {
     margin-right: .5rem;
+    @media only screen and (max-width: $bp-smallest) {
+      margin-left: 1rem;
+    }
   }
 
   &__rating {
@@ -280,16 +309,28 @@
     justify-content: center;
     align-self: stretch;
     padding: 0 2.25rem;
+    @media only screen and (max-width: $bp-small) {
+      padding: 0 1.5rem;
+    }
   }
 
   &__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px;
+    @media only screen and (max-width: $bp-small) {
+      font-size: 1.8rem;
+    }
   }
 
   &__rating-count {
     font-size: .8rem;
+    @media only screen and (max-width: $bp-small) {
+      font-size: .5rem;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      text-align: center;
+    }
   }
 }
 
@@ -306,6 +347,9 @@
   background-color: transparent;
   cursor: pointer;
   transition: all .2s;
+  @media only screen and (max-width: $bp-smallest) {
+    padding: 0;
+  }
 
   & span {
     margin-left: 3px;
@@ -465,6 +509,9 @@
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: .4rem;
+    @media only screen and (max-width: $bp-smallest) {
+      margin-bottom: 0;
+    }
   }
 
   &__user-date {
@@ -507,6 +554,10 @@
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 2.5rem;
+    @media only screen and (max-width: $bp-smallest) {
+      font-size: 1.75rem;
+      margin: 1.5rem .75rem;
+    }
   }
 }
 

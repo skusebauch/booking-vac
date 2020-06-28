@@ -59,6 +59,11 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 31.25em) {
+    .header {
+      flex-wrap: wrap;
+      align-content: space-around;
+      height: 12rem; } }
 
 .content {
   display: flex; }
@@ -86,6 +91,9 @@ body {
   @media only screen and (max-width: 56.25em) {
     .detail {
       padding: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .detail {
+      flex-direction: column; } }
 
 .description {
   background-color: #fff;
@@ -97,6 +105,10 @@ body {
     .description {
       padding: 2rem;
       margin-right: 3rem; } }
+  @media only screen and (max-width: 37.5em) {
+    .description {
+      margin-right: 0;
+      margin-bottom: 3rem; } }
 
 .user-reviews {
   flex: 1;
@@ -113,6 +125,11 @@ body {
   align-items: center;
   justify-content: center;
   flex: 0 0 40%; }
+  @media only screen and (max-width: 31.25em) {
+    .search {
+      order: 1;
+      flex: 0 0 100%;
+      background-color: var(--color-grey-light-2); } }
   .search__input {
     font-family: inherit;
     font-size: inherit;
@@ -229,11 +246,21 @@ body {
       .side-nav__link:link, .side-nav__link:visited {
         justify-content: center;
         padding: 2rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__link:link, .side-nav__link:visited {
+        flex-direction: column;
+        padding: 1.5rem .5rem; } }
   .side-nav__icon {
     width: 1.75rem;
     height: 1.75rem;
     margin-right: 2rem;
     fill: currentColor; }
+    @media only screen and (max-width: 37.5em) {
+      .side-nav__icon {
+        margin-right: 0;
+        margin-bottom: .7rem;
+        width: 1.5rem;
+        height: 1.5rem; } }
 
 .legal {
   font-size: 1.2rem;
@@ -260,6 +287,10 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     padding: 1.5rem 3rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__heading {
+        font-size: 1.8rem;
+        padding: 1.25rem 2rem; } }
   .overview__stars {
     margin-right: auto;
     display: flex; }
@@ -273,6 +304,9 @@ body {
     align-items: center; }
   .overview__icon-location {
     margin-right: .5rem; }
+    @media only screen and (max-width: 31.25em) {
+      .overview__icon-location {
+        margin-left: 1rem; } }
   .overview__rating {
     background-color: var(--color-primary);
     color: #fff;
@@ -283,12 +317,24 @@ body {
     justify-content: center;
     align-self: stretch;
     padding: 0 2.25rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating {
+        padding: 0 1.5rem; } }
   .overview__rating-average {
     font-size: 2.25rem;
     font-weight: 300;
     margin-bottom: -3px; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating-average {
+        font-size: 1.8rem; } }
   .overview__rating-count {
     font-size: .8rem; }
+    @media only screen and (max-width: 37.5em) {
+      .overview__rating-count {
+        font-size: .5rem; } }
+    @media only screen and (max-width: 31.25em) {
+      .overview__rating-count {
+        text-align: center; } }
 
 .btn-inline {
   border: none;
@@ -300,6 +346,9 @@ body {
   background-color: transparent;
   cursor: pointer;
   transition: all .2s; }
+  @media only screen and (max-width: 31.25em) {
+    .btn-inline {
+      padding: 0; } }
   .btn-inline span {
     margin-left: 3px;
     transition: margin-left .2s; }
@@ -397,6 +446,9 @@ body {
     font-weight: 600;
     text-transform: uppercase;
     margin-bottom: .4rem; }
+    @media only screen and (max-width: 31.25em) {
+      .review__user-name {
+        margin-bottom: 0; } }
   .review__user-date  {
     font-size: 1rem;
     color: var(--color-grey-dark-3); }
@@ -426,6 +478,10 @@ body {
     font-weight: 400;
     text-transform: uppercase;
     margin-bottom: 2.5rem; }
+    @media only screen and (max-width: 31.25em) {
+      .cta__book-now {
+        font-size: 1.75rem;
+        margin: 1.5rem .75rem; } }
 
 .btn {
   font-size: 1.5rem;
