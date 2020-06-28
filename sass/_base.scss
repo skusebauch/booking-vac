@@ -1,4 +1,4 @@
-//Color custom properties
+// Color css custom properties
 :root {
   --color-primary: #eb2f64;
   --color-primary-light: #FF3366;
@@ -17,6 +17,11 @@
   --line: 1px solid var(--color-grey-light-2);
 }
 
+
+$bp-largest: 75em; // 1200px/16 = 75
+$bp-large: 68.75em; // 1100px/16 = 68,75
+$bp-medium: 56.25em; // 900px/16 = 56,25
+
 * {
   margin: 0;
   padding: 0;
@@ -32,6 +37,11 @@ html {
   box-sizing: border-box;
   // 1rem = 10px.... because 16 px is default 1rem, just need to compute this
   font-size: 62.5%;
+
+  @media only screen and (max-width: $bp-large) {
+    // 8px/16 = 50%
+    font-size: 50%;
+  }
 }
 
 body {
