@@ -24,12 +24,12 @@
     color: inherit;
     background-color: var(--color-grey-light-2);
     border: none;
-    padding: .7rem 2rem;
+    padding: 0.7rem 2rem;
     border-radius: 100px;
     width: 90%;
     // so we can include the button(icon)
     margin-right: -3.25rem;
-    transition: all .3s;
+    transition: all 0.3s;
     // when input element get focus/active
     &:focus {
       // get rid of the outline which is drawn around elements
@@ -103,7 +103,7 @@
   }
 
   &__notification {
-    font-size: .8rem;
+    font-size: 0.8rem;
     height: 1.75rem;
     width: 1.75rem;
     border-radius: 50%;
@@ -147,15 +147,15 @@
     position: relative;
 
     &:not(:last-child) {
-      margin-bottom: .5rem;
+      margin-bottom: 0.5rem;
       @media only screen and (max-width: $bp-medium) {
-        // to grow for the entire width 
+        // to grow for the entire width
         margin: 0;
       }
     }
 
     @media only screen and (max-width: $bp-medium) {
-      // to grow for the entire width 
+      // to grow for the entire width
       flex: 1;
     }
   }
@@ -172,11 +172,10 @@
     // default at the center
     // transform-origin: ;
 
-
-    transition: transform .2s,
-                // delay of .2s after transform it will happen
-                width .4s cubic-bezier(1,0,0,1) .2s;
-                background-color: .1s;
+    transition: transform 0.2s,
+      // delay of .2s after transform it will happen
+        width 0.4s cubic-bezier(1, 0, 0, 1) 0.2s;
+    background-color: 0.1s;
   }
 
   &__item:hover::before,
@@ -202,15 +201,14 @@
     z-index: 10;
 
     @media only screen and (max-width: $bp-medium) {
-      // to grow for the entire width 
+      // to grow for the entire width
       justify-content: center;
       padding: 2rem;
     }
     @media only screen and (max-width: $bp-small) {
       flex-direction: column;
-      padding: 1.5rem .5rem;
+      padding: 1.5rem 0.5rem;
     }
-
   }
 
   &__icon {
@@ -220,7 +218,7 @@
     fill: currentColor;
     @media only screen and (max-width: $bp-small) {
       margin-right: 0;
-      margin-bottom: .7rem;
+      margin-bottom: 0.7rem;
       width: 1.5rem;
       height: 1.5rem;
     }
@@ -237,6 +235,16 @@
   padding: 2.5rem;
   @media only screen and (max-width: $bp-medium) {
     display: none;
+  }
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: var(--color-grey-light-4);
+    transition: all 0.2s ease;
+    &:hover {
+      transform: scale(1.2);
+      color: white;
+    }
   }
 }
 
@@ -292,7 +300,7 @@
     align-items: center;
   }
   &__icon-location {
-    margin-right: .5rem;
+    margin-right: 0.5rem;
     @media only screen and (max-width: $bp-smallest) {
       margin-left: 1rem;
     }
@@ -324,9 +332,9 @@
   }
 
   &__rating-count {
-    font-size: .8rem;
+    font-size: 0.8rem;
     @media only screen and (max-width: $bp-small) {
-      font-size: .5rem;
+      font-size: 0.5rem;
     }
     @media only screen and (max-width: $bp-smallest) {
       text-align: center;
@@ -346,14 +354,14 @@
   display: inline-block;
   background-color: transparent;
   cursor: pointer;
-  transition: all .2s;
+  transition: all 0.2s;
   @media only screen and (max-width: $bp-smallest) {
     padding: 0;
   }
 
   & span {
     margin-left: 3px;
-    transition: margin-left .2s;
+    transition: margin-left 0.2s;
   }
 
   &:hover {
@@ -367,7 +375,6 @@
     outline: none;
     animation: pulsate 1s infinite;
   }
-
 }
 
 @keyframes pulsate {
@@ -378,7 +385,7 @@
 
   50% {
     transform: scale(1.05);
-    box-shadow: 0 1rem 4rem rgba(0,0,0,.25);
+    box-shadow: 0 1rem 4rem rgba(0, 0, 0, 0.25);
   }
 
   100% {
@@ -412,7 +419,7 @@
     display: inline-block;
     height: 1rem;
     width: 1rem;
-    margin-right: .7rem;
+    margin-right: 0.7rem;
     fill: var(--color-primary);
 
     // old way: to implement the svg files
@@ -421,19 +428,19 @@
 
     // newer approach
     @supports (-webkit-mask-image: url()) or (mask-image: url()) {
-    background-color: var(--color-primary);
-    -webkit-mask-image: url(../img/chevron-thin-right.svg);
-    -webkit-mask-size: cover;
-    mask-image: url(../img/chevron-thin-right.svg);
-    mask-size: cover;
-    background-image: none;
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(../img/chevron-thin-right.svg);
+      mask-size: cover;
+      background-image: none;
     }
   }
 
   &__item {
-    // dont grow dont shrink and the width of one item is 50% that we have two 
+    // dont grow dont shrink and the width of one item is 50% that we have two
     flex: 0 0 50%;
-    margin-bottom: .7rem;
+    margin-bottom: 0.7rem;
   }
 }
 
@@ -500,7 +507,6 @@
     width: 4.5rem;
     border-radius: 50%;
     margin-right: 1.5rem;
-
   }
 
   &__user-box {
@@ -511,15 +517,15 @@
     font-size: 1.1rem;
     font-weight: 600;
     text-transform: uppercase;
-    margin-bottom: .4rem;
+    margin-bottom: 0.4rem;
     @media only screen and (max-width: $bp-smallest) {
       margin-bottom: 0;
     }
   }
 
-  &__user-date {
+  &__user-date  {
     font-size: 1rem;
-    color: var(--color-grey-dark-3)
+    color: var(--color-grey-dark-3);
   }
 
   &__rating {
@@ -559,7 +565,7 @@
     margin-bottom: 2.5rem;
     @media only screen and (max-width: $bp-smallest) {
       font-size: 1.75rem;
-      margin: 1.5rem .75rem;
+      margin: 1.5rem 0.75rem;
     }
   }
 }
@@ -574,10 +580,10 @@
   border-radius: 100px;
   border: none;
   background-image: linear-gradient(
-                    to right,
-                    var(--color-primary-light),
-                    var(--color-primary-dark)
-                    );
+    to right,
+    var(--color-primary-light),
+    var(--color-primary-dark)
+  );
   color: #fff;
   position: relative;
   overflow: hidden;
@@ -585,17 +591,17 @@
 
   &:hover {
     background-image: linear-gradient(
-                    to left,
-                    var(--color-primary-light),
-                    var(--color-primary-dark)
-                    );
+      to left,
+      var(--color-primary-light),
+      var(--color-primary-dark)
+    );
   }
 
   & > * {
     display: inline-block;
     height: 100%;
     width: 100%;
-    transition: all .5s;
+    transition: all 0.5s;
   }
   &__visible {
     padding: 2rem 7.5rem;
@@ -610,7 +616,7 @@
   }
 
   &:hover &__visible {
-     transform: translateY(100%);
+    transform: translateY(100%);
   }
 
   &:hover &__invisible {
